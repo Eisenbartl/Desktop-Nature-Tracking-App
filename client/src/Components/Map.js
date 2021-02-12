@@ -4,7 +4,7 @@ import React from 'react';
 import LocationMarker from './LocationMarker';
 import LocationInfoBox from './LocationInfoBox';
 
-const API_KEY = require('dotenv');
+require('dotenv').config;
 
 const Map = ({eventData, center, zoom }) => {
     const [locationInfo, setLocationInfo] = useState(null);
@@ -23,7 +23,7 @@ const Map = ({eventData, center, zoom }) => {
     return (
         <div className='map'>
             <GoogleMapReact
-                bootstrapURLKeys={ env.API_KEY }
+                bootstrapURLKeys={{ key: process.env.API_KEY }}
                 defaultCenter={ center }
                 defaultZoom={ zoom }
             >
