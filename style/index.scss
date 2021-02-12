@@ -4,5 +4,11 @@
   box-sizing: border-box;
 }
 
+.app-container {
+  display: flex;
+}
+
 @import "./partials/sideMenu";
 @import "./partials/map";
+@import "./partials/icons";
+@import "./partials/locationInfoBox";
